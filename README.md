@@ -128,7 +128,7 @@ The migration was verified by:
 
 ## AWS DMS Endpoints
 
-![DMS Endpoints](screenshots/dms-endpoints.png)
+![DMS Endpoints](screenshots/dms-endpoints-fixed.png)
 
 ## Source Database (MariaDB)
 
