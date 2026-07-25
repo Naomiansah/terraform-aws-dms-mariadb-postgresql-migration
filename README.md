@@ -47,11 +47,11 @@ This project simulates a real-world migration by moving a MariaDB database hoste
 acme-dms-migration/
 │
 ├── architecture/
-│   └── Acme-Retail-DMS-Architecture.png
+│   └── acme-retail-dms-architecture.png
 │
 ├── screenshots/
 │   ├── terraform-apply.png
-│   ├── DMS-endpoints.png
+│   ├── dms-endpoints.png
 │   ├── mariadb-data.png
 │   └── postgres-verification.png
 │
