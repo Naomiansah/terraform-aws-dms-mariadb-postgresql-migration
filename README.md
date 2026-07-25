@@ -110,8 +110,6 @@ Deploy the infrastructure.
 terraform apply
 ```
 
----
-
 # Validation
 
 The migration was verified by:
@@ -122,33 +120,23 @@ The migration was verified by:
 - Continuous CDC replication
 - Matching records in MariaDB and PostgreSQL
 
----
-
 # Project Screenshots
 
 ## Terraform Deployment
 
 ![Terraform Apply](screenshots/terraform-apply.png)
 
----
-
 ## AWS DMS Endpoints
 
 ![DMS Endpoints](screenshots/dms-endpoints.png)
-
----
 
 ## Source Database (MariaDB)
 
 ![MariaDB](screenshots/mariadb-data.png)
 
----
-
 ## Target Database (PostgreSQL)
 
 ![PostgreSQL](screenshots/postgres-verification.png)
-
----
 
 # Challenges Encountered
 
@@ -159,8 +147,6 @@ After recreating the EC2 instance, the MariaDB migration user no longer existed,
 **Resolution**
 
 Recreated the migration user and granted the required database permissions.
-
----
 
 ### AWS Secrets Manager Integration
 
@@ -177,8 +163,6 @@ Created a dedicated secret containing:
 - username
 - password
 
----
-
 ### Security Group Troubleshooting
 
 AWS DMS successfully connected to PostgreSQL, but direct verification from EC2 initially failed.
@@ -187,8 +171,6 @@ AWS DMS successfully connected to PostgreSQL, but direct verification from EC2 i
 
 Added a temporary PostgreSQL security-group rule for validation and removed it afterward.
 
----
-
 ### Terraform Dependencies
 
 The DMS replication instance depended on IAM resources that needed to exist first.
@@ -196,8 +178,6 @@ The DMS replication instance depended on IAM resources that needed to exist firs
 **Resolution**
 
 Explicit Terraform dependencies ensured the correct resource creation order.
-
----
 
 # Lessons Learned
 
@@ -212,8 +192,6 @@ This project strengthened my understanding of:
 - Security Groups
 - Production-style cloud troubleshooting
 
----
-
 # Cleanup
 
 Destroy the infrastructure after testing.
@@ -221,8 +199,6 @@ Destroy the infrastructure after testing.
 ```bash
 terraform destroy
 ```
-
----
 
 # Author
 
